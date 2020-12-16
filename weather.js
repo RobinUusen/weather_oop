@@ -1,17 +1,17 @@
-class Weather {
+class Weather{
     constructor(city) {
         this.city = city;
-        this.key = '4d0ddb13bcb90ccb4c38a0987921e4ce';
+        this.key = '77b9c09f4440335ae3418f0aa5fff2d8';
     }
 
-    // data from API
-    async weatherData() {
-        const resp = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Toronto,CA&appid=" + this.city + "&appid=" + this.key);
+    //data from api
+    async weatherData(){
+        const resp = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + this.city + '&appid=' + this.key);
         const data = await resp.json();
         return data;
     }
 
-    // change city
+    //change city
     changeCityName(name){
         this.city = name;
     }
